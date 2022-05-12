@@ -14,8 +14,7 @@ repositories {
     //jcenter() 지원 중단
 }
 
-//for Junit 5
-test {
+tasks.named('test') {
     useJUnitPlatform()
 }
 
