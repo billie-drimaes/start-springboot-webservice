@@ -1,0 +1,25 @@
+//버전 업그레이드로 인하여 책과 형식 변경됨
+plugins {
+    id "org.springframework.boot" version "2.6.7"
+    id "io.spring.dependency-management" version "1.0.11.RELEASE"
+    id "java"
+}
+
+group 'com.pongi.project'
+version '0.0.1-SNAPSHOT' + new Date().format("yyyyMMddHHmmss") //Date는 필수적이진 않으나, 관리용으로 넣는것같다.
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    //jcenter() 지원 중단
+}
+
+//for Junit 5
+test {
+    useJUnitPlatform()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
