@@ -20,10 +20,14 @@ tasks.named('test') {
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
-
+    //spring data JPA
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     // lombok
     implementation 'org.projectlombok:lombok'
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
+    // H2 Database
+    runtimeOnly 'com.h2database:h2'
+    //test
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
