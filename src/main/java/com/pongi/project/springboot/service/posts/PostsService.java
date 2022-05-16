@@ -29,6 +29,13 @@ public class PostsService {
         return id;
     }
 
+    @Transactional
+    public void delete(Long id){
+        Posts posts = postsRepository.findById(id).orElseThrow(()->new IllegalArgumentException("해당 게시글이 없습니다. id="+ id));
+
+        postsRepository.delete(posts);
+    }
+
     @Transactional(readOnly = true) //읽기전용으로 메모리 사용량 최적화, false일 경우 영속성컨텍스트 관리에 따라 스냅샷인스턴스 보관
     public PostsResponseDto findById(Long id) {
         Posts entity = postsRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("해당 게시글이 없습니다. id="+id));
