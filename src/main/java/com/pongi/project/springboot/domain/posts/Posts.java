@@ -1,6 +1,7 @@
 package com.pongi.project.springboot.domain.posts;
 
 
+import com.pongi.project.springboot.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -15,7 +16,7 @@ import javax.persistence.GenerationType;
 @Getter
 @NoArgsConstructor
 @Entity
-public class Posts {
+public class Posts extends BaseTimeEntity { //BaseTimeEntity 상속 안하면 작동 안함
 
     @Id //PK필드값
     @GeneratedValue(strategy = GenerationType.IDENTITY) //PK 생성규칙 - auto_increment
