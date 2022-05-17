@@ -14,6 +14,7 @@ public class PostsApiController {
 
     private final PostsService postsService;
 
+    //REST에서 CRUD는 생성(Create)- POST, 읽기(Read)- GET, 수정(Update)- PUT, 삭제(Delete)-DELETE
     @PostMapping("/api/v1/posts")
     public Long save(@RequestBody PostsSaveRequestDto requestDto) {
         return postsService.save(requestDto);
@@ -35,4 +36,5 @@ public class PostsApiController {
 
         return id;
     }
+
 }
