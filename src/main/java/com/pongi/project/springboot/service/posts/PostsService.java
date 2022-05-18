@@ -35,8 +35,9 @@ public class PostsService {
 
     @Transactional
     public void delete(Long id){
+        //엔티티 존재여부 확인을 위해, 조회 후 삭제하는 방식
         Posts posts = postsRepository.findById(id).orElseThrow(()->new IllegalArgumentException("해당 게시글이 없습니다. id="+ id));
-
+        //jpaRepository에서 delete 기능을 제공, 엔티티 조회를 하지 않고, deleteById를 사용할 수도 있음
         postsRepository.delete(posts);
     }
 
