@@ -3,7 +3,6 @@ package com.pongi.project.springboot.config.auth.dto;
 
 import com.pongi.project.springboot.domain.user.Role;
 import com.pongi.project.springboot.domain.user.User;
-import com.sun.xml.internal.ws.api.ha.StickyFeature;
 import lombok.Builder;
 import lombok.Getter;
 
