@@ -30,6 +30,8 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok'
     // H2 Database
     runtimeOnly 'com.h2database:h2'
+    // Spring Security
+    implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
     //test
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
